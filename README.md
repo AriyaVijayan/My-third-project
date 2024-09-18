@@ -1,2 +1,2 @@
-# My-third-project
+# My-third-project-SQL
 This project includes practicing SQL challenges.
