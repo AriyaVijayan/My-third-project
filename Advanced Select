@@ -1,0 +1,37 @@
+Problem: Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. 
+If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+select name from students
+where
+marks > 75 order by 
+substr(name,-3), id asc
+
+Problem: Write a query that prints a list of employee names (i.e.: the name attribute) from the Employee table in alphabetical order.
+select name from employee
+order by name asc
+
+Problem: Write a query that prints a list of employee names (i.e.: the name attribute) for employees in Employee having a salary greater than  per month who have been employees for less than  months. 
+Sort your result by ascending employee_id.
+select name from employee
+where
+salary > (2000)
+and
+months < 10
+order by employee_id
+
+Problem: Write a query identifying the type of each record in the TRIANGLES table using its three side lengths. 
+Output one of the following statements for each record in the table:
+Equilateral: It's a triangle with  sides of equal length.
+Isosceles: It's a triangle with  sides of equal length.
+Scalene: It's a triangle with  sides of differing lengths.
+Not A Triangle: The given values of A, B, and C don't form a triangle.
+select
+CASE
+    WHEN A + B <= C OR A + C <= B OR B + C <= A
+        THEN 'Not A Triangle'
+    WHEN A = B AND A = C AND B = C
+        THEN 'Equilateral'
+    WHEN A = B OR A = C OR B = C
+        THEN 'Isosceles'
+    ELSE 'Scalene'
+END
+FROM TRIANGLES;
