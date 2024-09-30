@@ -1,0 +1,5 @@
+- Link https://www.hackerrank.com/challenges/african-cities/submissions/code/403482655
+
+Select City.Name from City, Country
+where CITY.CountryCode = COUNTRY.Code and
+Country.CONTINENT = 'Africa' 
