@@ -1,0 +1,6 @@
+- Link https://www.hackerrank.com/challenges/average-population-of-each-continent/problem?isFullScreen=true
+
+Select COUNTRY.Continent, Floor(Avg(CITY.Population))
+from City, Country
+where CITY.CountryCode = COUNTRY.Code
+GROUP BY COUNTRY.CONTINENT
