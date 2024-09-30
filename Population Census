@@ -1,0 +1,4 @@
+- Link https://www.hackerrank.com/challenges/asian-population/problem?isFullScreen=true
+
+select Sum(CITY.Population) from City, Country
+where  CITY.CountryCode =  COUNTRY.Code and COUNTRY.CONTINENT = 'Asia'
